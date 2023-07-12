@@ -65,7 +65,6 @@ export class AuthService {
       user,
       token: this.getJwt({ userId: user.id })
     }
-
   }
 
   findAll(): Promise<User[]> {
