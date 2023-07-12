@@ -68,12 +68,16 @@ export class AuthService {
 
   }
 
-  findAll() {
-    return `This action returns all auth`;
+  findAll(): Promise<User[]> {
+    return this.userModel.find();
+  }
+
+  findUserById(id: string) {
+    return this.userModel.findById(id);
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} auth`;
+    return '';
   }
 
   update(id: number, updateAuthDto: UpdateAuthDto) {
